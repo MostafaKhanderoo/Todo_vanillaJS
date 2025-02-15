@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" class="w-full h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="bao flex  w-full h-full items-center justify-start flex-col">
+    <h1 class="flex font-bold text-3xl justify-center mt-14 items-center text-white">Todo-list App With vanillaJS</h1>
+    <span class="text-gray-400 mt-3.5">maktab 122 front final project</span>
+    <div class="flex flex-row items-center mt-5"><img class="mr-1" src="src/assets/picture/icons8-github-16.png" alt="github icon"><span class="flex text-orange-400  mx">MostafaKhanderoo</span></div>
+
+      <main class="main shadow-2xl rounded-3xl w-full min-h-full max-h-full mt-2 max-w-[1080px]">
+        <div class="flex flex-row items-center justify-center"><img class="mr-2 mt-4" src="src/assets/picture/mainicon.png" alt="todo icon"> 
+           <h1 class="flex main-text text-4xl justify-center mt-6 items-center text-white">THINGS TO DO</h1></div>
+           <div class="flex flex-row  w-full justify-around  mt-10">
+         
+            <div class="bao flex flex-col ml-4 rounded-3xl max-w-96 w-full  w min-h-52">
+              <input type="text" id="task-name" class="mt-4 ml-2 mr-2  p-3 rounded-md border min-h-3 max-h-9 border-gray-500 hover:bg-gray-600 bg-gray-800 text-white placeholder-gray-500 focus:outline-none" placeholder="Task Name">
+  
+            <input type="text" id="task-title" class="mt-5 ml-2 mr-2  p-3 rounded-md border border-gray-500 max-h-40 hover:bg-gray-600 bg-gray-800 text-white placeholder-gray-500 focus:outline-none" placeholder="Task Title">
+  
+            <div class="flex justify-between  mt-4">
+              <button type="submit" id="createTodo" class="flex justify-center items-center hover:bg-amber-500 bg-yellow-600 ml-2 text-black font-lato px-6 py-2 rounded-md shadow-md h-6"><h1 class="text-xs font-bold text">create</h1></button>
+              <button type="submit" id="clearAllTodo" class="flex justify-center items-center border ml-4 mr-2 hover:bg-gray-600 border-gray-500 text-gray-300 font-lato px-2 py-2 rounded-md h-6"><h1 class="text-xs font-bold">clear all data</h1></button>
+            </div>
+
+
+          </div> 
+          <div class="flex flex-col items-center bg-gray-800 rounded-md px-3 py-2 w-96 h-12 ml-2 border border-gray-600">
+            <div class=" flex ">
+            <input type="text" placeholder="Searching todos...   " class="bg-transparent text-gray-300 justify-around placeholder-gray-500 focus:outline-none  w-full">
+            <button class=" bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+              <img class="size-4" src="src/assets/picture/icons8-magnifying-glass-96.png" alt="magnifying glass">
+              </button>
+</div>
+
+
+<div id="todoList" class="max-w-96 w-full   min-h-28 mr-12">
+             
+</div>
+              
+          </div>
+
+          </div>
+       
+
+
+       
+
+
+      </main>
+    
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

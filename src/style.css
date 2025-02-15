@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "kito";
+    src: url(./assets/fonts/KiottoDemo-pgo11.otf);
+}
+@font-face {
+    font-family: "fun-font";
+    src: url(./assets/fonts/MondayFeelings-7BD2l.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    src: url(./assets/fonts/Lato-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Lato";
+    src: url(./assets/fonts/Lato-Regular.ttf);
+    font-weight: normal;
+}
+.main-text{
+    font-family: kito;
+ }
+ .b1{
+    
+    border-color: #0CA0E5;
+    
+ }
+ .b2{
+    border-color: rgb(182, 32, 32);
+ }
+ .main{
+    
+    background:#28293d;
+ }
+ .bao{
+    background:#202241;
+ }
+@theme {
+    --font-lato: "Lato", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+@layer components {
+    .nav-link {
+      @apply transition-colors duration-300 ease-in-out hover:text-black;
+    }
+  }
