@@ -3,11 +3,13 @@ import './style.css';
 const createTodo = document.querySelector("#createTodo");
 const clearAllTodo = document.querySelector("#clearAllTodo");
 const todoList = document.querySelector("#todoList");
+const createText= document.querySelector("#createText");
 
 let todos = [];
 
 createTodo.addEventListener("click", (e) => {
     e.preventDefault();
+    createText.textContent = "create";
 
     const taskName = document.querySelector("#task-name").value.trim();
     const taskTitle = document.querySelector("#task-title").value.trim();
@@ -26,8 +28,9 @@ createTodo.addEventListener("click", (e) => {
 
     todos.push(todoItem);
     renderTodos();
-taskName.c
-});
+    document.querySelector("#task-name").value = "";
+    document.querySelector("#task-title").value = "";
+}); 
 
 function renderTodos() {
     todoList.innerHTML = ""; 
@@ -39,6 +42,7 @@ function renderTodos() {
         const todoElement = document.createElement("div");
         todoElement.classList.add("bao", "flex", "flex-row", "justify-between", "mr-3.5", "mt-5", "ml-4", "rounded-3xl", "max-w-96", "w-full", "min-h-28");
 
+        
   
         const todoDate = new Date(todo.date).toLocaleString();
 
@@ -67,18 +71,25 @@ function renderTodos() {
 
     
         todoElement.querySelector(".editTodo").addEventListener("click", (e) => {
-            
 
+       
+        createText.textContent = "Update";
+        
         const id = e.target.closest("button").dataset.id;            const task = todos.find(t => t.id === id);
 
             if (task) {
+               
       document.querySelector("#task-name").value = task.taskName;
                document.querySelector("#task-title").value = task.taskTitle;
           todos = todos.filter(t => t.id !== id);
+     
+       
                 renderTodos();
+                document.querySelector.id =this.id;
             }
+           
         });
-
+        
         todoList.appendChild(todoElement);
     });
 }
